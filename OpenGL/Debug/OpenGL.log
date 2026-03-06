@@ -1,0 +1,10 @@
+﻿  HelloGL.cpp
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(41,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(41,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(42,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(42,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(43,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(43,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(44,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\source\repos\OpenGL\OpenGL\HelloGL.cpp(44,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  OpenGL.vcxproj -> C:\Users\r010918o\source\repos\OpenGL\Debug\OpenGL.exe
