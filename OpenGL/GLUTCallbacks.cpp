@@ -20,4 +20,9 @@ namespace GLUTCallbacks
 			hgl->Display();
 		}
 	}
+	void Timer(int preferredRefresh)
+	{
+		hgl->Update();
+		glutTimerFunc(preferredRefresh, GLUTCallbacks::Timer, preferredRefresh);
+	}
 }
