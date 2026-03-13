@@ -17,8 +17,10 @@ public:
 
 	void DrawPolygon();
 	void DrawPolygon(float x, float y);
-	void DrawTriangle();
+	void DrawTriangle(float x, float y);
 	void Update();
+
+	void Keyboard(unsigned char key, int x, int y);
 
 private:
 	float rotation;

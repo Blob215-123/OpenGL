@@ -15,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\GLUTCallbacks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HelloGL.cpp",
-              "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.cpp",
-              "RelativeDocumentMoniker": "OpenGL\\HelloGL.cpp",
-              "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.cpp",
-              "RelativeToolTip": "OpenGL\\HelloGL.cpp",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-06T14:59:10.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\main.cpp",
               "RelativeDocumentMoniker": "OpenGL\\main.cpp",
@@ -56,6 +43,32 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-06T14:42:51.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GLUTCallbacks.cpp",
+              "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.cpp",
+              "RelativeDocumentMoniker": "OpenGL\\GLUTCallbacks.cpp",
+              "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.cpp",
+              "RelativeToolTip": "OpenGL\\GLUTCallbacks.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-06T15:14:22.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GLUTCallbacks.h",
+              "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.h",
+              "RelativeDocumentMoniker": "OpenGL\\GLUTCallbacks.h",
+              "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.h",
+              "RelativeToolTip": "OpenGL\\GLUTCallbacks.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-06T15:14:01.562Z",
               "EditorCaption": ""
             }
           ]
@@ -66,41 +79,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GLUTCallbacks.cpp",
-              "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.cpp",
-              "RelativeDocumentMoniker": "OpenGL\\GLUTCallbacks.cpp",
-              "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.cpp",
-              "RelativeToolTip": "OpenGL\\GLUTCallbacks.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-06T15:14:22.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "HelloGL.h",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.h",
               "RelativeDocumentMoniker": "OpenGL\\HelloGL.h",
               "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.h",
               "RelativeToolTip": "OpenGL\\HelloGL.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-06T14:41:56.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GLUTCallbacks.h",
-              "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.h",
-              "RelativeDocumentMoniker": "OpenGL\\GLUTCallbacks.h",
-              "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\GLUTCallbacks.h",
-              "RelativeToolTip": "OpenGL\\GLUTCallbacks.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-06T15:14:01.562Z",
+              "DocumentIndex": 0,
+              "Title": "HelloGL.cpp",
+              "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.cpp",
+              "RelativeDocumentMoniker": "OpenGL\\HelloGL.cpp",
+              "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.cpp",
+              "RelativeToolTip": "OpenGL\\HelloGL.cpp",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAqwGUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-06T14:59:10.346Z",
               "EditorCaption": ""
             }
           ]
