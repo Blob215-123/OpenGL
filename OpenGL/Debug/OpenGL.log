@@ -1,10 +1,10 @@
 ﻿  HelloGL.cpp
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(67,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(67,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(68,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(68,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(69,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(69,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(70,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(70,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(88,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(88,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(89,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(89,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(90,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(90,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(91,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(91,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
   OpenGL.vcxproj -> C:\Users\r010918o\Documents\GitHub\OpenGL\Debug\OpenGL.exe

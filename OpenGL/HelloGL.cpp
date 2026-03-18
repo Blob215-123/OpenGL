@@ -2,6 +2,13 @@
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
+	camera = new Camera();
+	camera->eye.x = 0; camera->eye.y = 0; camera->eye.z = 1;
+	camera->center.x = 0; camera->center.y = 0; camera->center.x = 0;
+	camera->up.x = 0; camera->up.y = 1; camera->up.z = 0;
+
+
+
 	rotation = 0.0f;
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE);
@@ -17,13 +24,23 @@ HelloGL::HelloGL(int argc, char* argv[])
 	glutDisplayFunc(GLUTCallbacks::Display);
 
 	glutTimerFunc(REFRESHRATE, GLUTCallbacks::Timer, REFRESHRATE);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+
+	glViewport(0, 0, 800, 800);
+
+	gluPerspective(45, 1, 0, 1000);
+
+	glMatrixMode(GL_MODELVIEW);
+
 	glutKeyboardFunc(GLUTCallbacks::Keyboard);
 
 	glutMainLoop();
 }
 HelloGL::~HelloGL()
 {
-
+	delete camera;
 }
 
 
@@ -43,7 +60,11 @@ void HelloGL::Display()
 }
 void HelloGL::Update()
 {
+	glLoadIdentity(); 
 	//rotation += 0.5f;
+	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, 
+		camera->center.x, camera->center.y, camera->center.z,
+		camera->up.x, camera->up.y, camera->up.z);
 
 	if (rotation >= 360.0f)
 		rotation = 0.0f;
@@ -73,32 +94,44 @@ void HelloGL::DrawPolygon(float x, float y)
 void HelloGL::DrawTriangle(float x, float y)
 {
 	glPushMatrix();
-	glTranslatef(x, y, 0.0f);
+	glTranslatef(x, y, 0);
 
 
 	glRotatef(rotation, 0, 0, 0.5);
-
-	glBegin(GL_POLYGON);
 	glColor3f(0, 1, 0);
-	glVertex2f(0.25, 0.25);
-	glColor3f( 1, 0, 0);
-	glVertex2f(-0.25, 0.25);
-
-	glColor3f(0, 0, 1);
-	glVertex2f(-0.25, -0.25);
-	glVertex2f(0.25, -0.25);
-
-	glEnd();
+	glutWireTeapot(1);
 	glPopMatrix();
 }
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
-	if (key == 'd')
+	if (key == 'w')
 	{
-		rotation -= 0.5f;
+		camera->eye.z -= 0.1f;
+		camera->center.z -= 0.1f;
+	}
+	else if (key == 's')
+	{
+		camera->eye.z += 0.1f;
+		camera->center.z += 0.1f;
 	}
 	else if (key == 'a')
 	{
-		rotation += 0.5f;
+		camera->eye.x -= 0.1f;
+		camera->center.x -= 0.1f;
+	}
+	else if (key == 'd')
+	{
+		camera->eye.x += 0.1f;
+		camera->center.x += 0.1f;
+	}
+	else if (key == 'z')
+	{
+		camera->center.x -= 0.1f;
+		camera->center.z += 0.1f;
+	}
+	else if (key == 'c')
+	{
+		camera->center.x += 0.1f;
+		camera->center.z -= 0.1f;
 	}
 }

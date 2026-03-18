@@ -6,6 +6,16 @@
 #include <windows.h>
 #define REFRESHRATE 16
 
+struct Vector3
+{
+	float x, y, z;
+};
+
+struct Camera
+{
+	Vector3 eye, center, up;
+};
+
 class HelloGL
 {
 public:
@@ -23,6 +33,7 @@ public:
 	void Keyboard(unsigned char key, int x, int y);
 
 private:
+	Camera* camera;
+
 	float rotation;
 };
-
