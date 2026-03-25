@@ -4,27 +4,13 @@
 #include <gl/GL.h>
 #include <gl/GLU.h>
 #include <windows.h>
+#include "Structure.h"
+
+class Cube;
+
 #define REFRESHRATE 16
 
-struct Vector3
-{
-	float x, y, z;
-};
-
-struct Camera
-{
-	Vector3 eye, center, up;
-};
-
-struct Color
-{
-	GLfloat r, g, b;
-};
-
-struct Vertex
-{
-	GLfloat x, y, z;
-};
+class Cube;
 
 class HelloGL
 {
@@ -46,14 +32,17 @@ public:
 	void Keyboard(unsigned char key, int x, int y);
 
 private:
+	Cube* _cubes[200];
+
+
 	Camera* camera;
 
 	static Vertex vertices[];
 	static Color colors[];
 
-	static Vertex indexedVertices[];
-	static Color indexedColours[];
-	static GLushort indices[];
+	//static Vertex indexedVertices[];
+	//static Color indexedColours[];
+	//static GLushort indices[];
 
 	float rotation;
 };
