@@ -3,14 +3,12 @@
 #include "GLUTCallbacks.h"
 #include <gl/GL.h>
 #include <gl/GLU.h>
-#include <windows.h>
+#include <Windows.h>
 #include "Structure.h"
-
-class Cube;
+#include "Cube.h";
 
 #define REFRESHRATE 16
 
-class Cube;
 
 class HelloGL
 {
@@ -21,24 +19,23 @@ public:
 
 	void Display();
 
-	void DrawPolygon();
-	void DrawPolygon(float x, float y);
-	void DrawTriangle(float x, float y);
+	//void DrawPolygon();
+	//void DrawPolygon(float x, float y);
+	//void DrawTriangle(float x, float y);
 	void Update();
-	void DrawCube();
-	void DrawCubeArray();
-	void DrawIndexedCube();
-	void DrawIndexedCubeAlt();
+	//void DrawCube();
+	//void DrawCubeArray();
+	//void DrawIndexedCube();
+	//void DrawIndexedCubeAlt();
 	void Keyboard(unsigned char key, int x, int y);
 
 private:
 	Cube* _cubes[200];
 
-
 	Camera* camera;
 
-	static Vertex vertices[];
-	static Color colors[];
+	//static Vertex vertices[];
+	//static Color colors[];
 
 	//static Vertex indexedVertices[];
 	//static Color indexedColours[];

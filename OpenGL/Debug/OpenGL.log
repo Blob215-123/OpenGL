@@ -1,12 +1,14 @@
-﻿  HelloGL.cpp
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(211,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(211,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(212,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(212,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(213,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(213,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(214,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(214,15): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+﻿  GLUTCallbacks.cpp
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\helloGL.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'GLUTCallbacks.cpp')
+  
+  HelloGL.cpp
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\helloGL.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'HelloGL.cpp')
+  
   main.cpp
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\helloGL.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'main.cpp')
+  
   Generating Code...
   OpenGL.vcxproj -> C:\Users\r010918o\Documents\GitHub\OpenGL\Debug\OpenGL.exe

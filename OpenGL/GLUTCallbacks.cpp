@@ -20,7 +20,7 @@ namespace GLUTCallbacks
 			hgl->Display();
 		}
 	}
-	void Timer(int preferredRefresh)
+	void Update(int preferredRefresh)
 	{
 		int updateTime = glutGet(GLUT_ELAPSED_TIME);
 
@@ -28,7 +28,7 @@ namespace GLUTCallbacks
 		hgl->Update();
 		updateTime = glutGet(GLUT_ELAPSED_TIME) - updateTime;
 
-		glutTimerFunc(preferredRefresh - updateTime, GLUTCallbacks::Timer, preferredRefresh);
+		glutTimerFunc(preferredRefresh - updateTime, GLUTCallbacks::Update, preferredRefresh);
 	}
 	void Keyboard(unsigned char key, int x, int y)
 	{
