@@ -30,7 +30,7 @@ public:
 	void InitGL(int argc, char* argv[]);
 
 private:
-	Cube* _cubes[200];
+	Cube *_cubes[200];
 
 	Camera* camera;
 

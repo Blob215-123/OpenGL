@@ -131,6 +131,7 @@
     <ClInclude Include="GLUTCallbacks.h" />
     <ClInclude Include="HelloGL.h" />
     <ClInclude Include="MeshLoader.h" />
+    <ClInclude Include="SceneObject.h" />
     <ClInclude Include="Structure.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 #include "helloGL.h"
 #include "Cube.h"
-
+#include "MeshLoader.cpp"
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
@@ -277,11 +277,10 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 void HelloGL::InitObjects()
 {
 		rotation = 0.0f;
-
-	Cube::Load((char*)"cube.txt");
+		Mesh* cubeMesh = MeshLoader::Load("cube.txt");
 	for (int i = 0; i < 200; i++)
 	{
-		_cubes[i] = new Cube(mesh,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f,
+		_cubes[i] = new Cube(cubeMesh ,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f,
 			-(rand() % 1000) / 10.0f);
 	}
 
