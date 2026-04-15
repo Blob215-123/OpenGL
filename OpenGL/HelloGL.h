@@ -9,13 +9,11 @@
 
 #define REFRESHRATE 16
 
-
 class HelloGL
 {
 public:
 	HelloGL(int argc, char* argv[]);
 	~HelloGL(void);
-
 
 	void Display();
 
@@ -28,6 +26,8 @@ public:
 	//void DrawIndexedCube();
 	//void DrawIndexedCubeAlt();
 	void Keyboard(unsigned char key, int x, int y);
+	void InitObjects();
+	void InitGL(int argc, char* argv[]);
 
 private:
 	Cube* _cubes[200];

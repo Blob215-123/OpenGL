@@ -1,14 +1,6 @@
 #include "Cube.h"
 
-Vertex* Cube::indexedVertices = nullptr;
-Color* Cube::indexedColours = nullptr;
-GLushort* Cube::indices = nullptr;
-
-int Cube::numVertices = 0;
-int Cube::numColors = 0;
-int Cube::numIndices = 0;
-
-Cube::Cube(float x, float y, float z)
+Cube::Cube(Mesh* mesh,float x, float y, float z)
 {
 	_position.x = x;
 	_position.y = y;
@@ -22,59 +14,59 @@ Cube::~Cube()
 
 }
 
-bool Cube::Load(char* path)
-{
-	std::ifstream inFile;
-	inFile.open(path);
-
-	if (!inFile.good())
-	{
-		std::cerr << "Can't open text file " << path << std::endl;
-		return false;
-	}
-
-	inFile >> numVertices;
-	indexedVertices = new Vertex[numVertices];
-
-	for (int i = 0; i < numVertices; i++)
-	{
-		inFile >> indexedVertices[i].x;
-		inFile >> indexedVertices[i].y;
-		inFile >> indexedVertices[i].z;
-	}
-
-	inFile >> numColors;
-	indexedColours = new Color[numColors];
-	
-	for (int i = 0; i < numColors; i++)
-	{
-		inFile >> indexedColours[i].r;
-		inFile >> indexedColours[i].g;
-		inFile >> indexedColours[i].b;
-	}
-
-	inFile >> numIndices;
-	indices = new GLushort[numIndices];
-
-	for (int i = 0; i < numIndices; i++)
-	{
-		inFile >> indices[i];
-	}
-
-	inFile.close();
-
-	return true;
-}
+//bool Cube::Load(char* path)
+//{
+//	std::ifstream inFile;
+//	inFile.open(path);
+//
+//	if (!inFile.good())
+//	{
+//		std::cerr << "Can't open text file " << path << std::endl;
+//		return false;
+//	}
+//
+//	inFile >> numVertices;
+//	indexedVertices = new Vertex[numVertices];
+//
+//	for (int i = 0; i < numVertices; i++)
+//	{
+//		inFile >> indexedVertices[i].x;
+//		inFile >> indexedVertices[i].y;
+//		inFile >> indexedVertices[i].z;
+//	}
+//
+//	inFile >> numColors;
+//	indexedColours = new Color[numColors];
+//	
+//	for (int i = 0; i < numColors; i++)
+//	{
+//		inFile >> indexedColours[i].r;
+//		inFile >> indexedColours[i].g;
+//		inFile >> indexedColours[i].b;
+//	}
+//
+//	inFile >> numIndices;
+//	indices = new GLushort[numIndices];
+//
+//	for (int i = 0; i < numIndices; i++)
+//	{
+//		inFile >> indices[i];
+//	}
+//
+//	inFile.close();
+//
+//	return true;
+//}
 
 void Cube::Draw()
 {
-	if (indexedVertices != nullptr && indexedColours != nullptr)
+	if (_mesh->Vertices != nullptr && _mesh->Colors != nullptr)
 	{
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_COLOR_ARRAY);
 
-		glVertexPointer(3, GL_FLOAT, 0, indexedVertices);
-		glColorPointer(3, GL_FLOAT, 0, indexedColours);
+		glVertexPointer(3, GL_FLOAT, 0, _mesh->Vertices);
+		glColorPointer(3, GL_FLOAT, 0, _mesh->Colors);
 
 		glPushMatrix();
 
@@ -82,7 +74,7 @@ void Cube::Draw()
 
 		glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
 
-		glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, indices);
+		glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, _mesh->Indices);
 
 		glPopMatrix();
 
