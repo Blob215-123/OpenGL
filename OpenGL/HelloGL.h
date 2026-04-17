@@ -1,9 +1,10 @@
 #pragma once
 #include "GL/freeglut.h"
-#include "GLUTCallbacks.h"
+
 #include <gl/GL.h>
 #include <gl/GLU.h>
 #include <Windows.h>
+#include "GLUTCallbacks.h"
 #include "Structure.h"
 #include "Cube.h";
 
@@ -30,7 +31,7 @@ public:
 	void InitGL(int argc, char* argv[]);
 
 private:
-	Cube *_cubes[200];
+	SceneObject* objects[1000];
 
 	Camera* camera;
 

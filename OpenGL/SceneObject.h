@@ -8,8 +8,9 @@ protected:
 
 public:
 	SceneObject(Mesh* mesh);
-	virtual ~SceneObject();
+	~SceneObject();
 
 	virtual void Update();
 	virtual void Draw();
 };
+

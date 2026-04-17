@@ -1,8 +1,7 @@
 #include "Cube.h"
 
-Cube::Cube(Mesh* mesh,float x, float y, float z)
+Cube::Cube(Mesh* mesh,float x, float y, float z) : SceneObject(mesh)
 {
-	_mesh = mesh;
 	_position.x = x;
 	_position.y = y;
 	_position.z = z;
@@ -75,7 +74,7 @@ void Cube::Draw()
 
 		glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
 
-		glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, _mesh->Indices);
+		glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);
 
 		glPopMatrix();
 

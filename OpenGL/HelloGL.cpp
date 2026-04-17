@@ -1,6 +1,7 @@
-#include "helloGL.h"
+#include "HelloGL.h"
 #include "Cube.h"
-#include "MeshLoader.cpp"
+#include "MeshLoader.h"
+#include "Pyramid.h"
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
@@ -14,8 +15,6 @@ HelloGL::~HelloGL()
 	camera = nullptr;
 }
 
-
-
 void HelloGL::Display()
 {
 	//Must be first
@@ -27,9 +26,9 @@ void HelloGL::Display()
 	DrawTriangle(0.5, -0.5);*/
 	/*DrawCube();*/
 	/*DrawCubeArray();*/
-	for (int i = 0; i < 200; i++)
+	for (int i = 0; i < 1000; i++)
 	{
-		_cubes[i]->Draw();
+		objects[i]->Draw();
 	}
 	//Must be last
 	glFlush();
@@ -43,9 +42,9 @@ void HelloGL::Update()
 		camera->center.x, camera->center.y, camera->center.z,
 		camera->up.x, camera->up.y, camera->up.z);
 
-	for (int i = 0; i < 200; i++)
+	for (int i = 0; i < 1000; i++)
 	{
-		_cubes[i]->Update();
+		objects[i]->Update();
 	}
 	if (rotation >= 360.0f)
 		rotation = 0.0f;
@@ -277,11 +276,15 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 void HelloGL::InitObjects()
 {
 		rotation = 0.0f;
-		Mesh* cubeMesh = MeshLoader::Load("cube.txt");
-	for (int i = 0; i < 200; i++)
+		Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
+		Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
+	for (int i = 0; i < 500; i++)
 	{
-		_cubes[i] = new Cube(cubeMesh ,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f,
-			-(rand() % 1000) / 10.0f);
+		objects[i] = new Cube(cubeMesh ,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+	}
+	for (int i = 500; i < 1000; i++)
+	{
+		objects[i] = new Pyramid(pyramidMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 	}
 
 	camera = new Camera();
