@@ -7,10 +7,26 @@ using namespace std;
 
 namespace MeshLoader
 {
+	void LoadTextures(ifstream& inFile, Mesh& mesh);
 	void LoadVertices(ifstream& inFile, Mesh& mesh);
 	void LoadColours(ifstream& inFile, Mesh& mesh);
 	void LoadIndices(ifstream& inFile, Mesh& mesh);
 
+	void LoadTextures(ifstream& inFile, Mesh& mesh)
+	{
+		inFile >> mesh.TexCoordCount;
+
+		if (mesh.TexCoordCount > 0)
+		{
+			mesh.TexCoords = new TexCoord[mesh.TexCoordCount];
+
+			for (int i = 0; i < mesh.TexCoordCount; i++)
+			{
+				inFile >> mesh.TexCoords[i].u;
+				inFile >> mesh.TexCoords[i].v;
+			}
+		}
+	}
 	void LoadVertices(ifstream& inFile, Mesh& mesh)
 	{
 		inFile >> mesh.VertexCount;
@@ -67,6 +83,7 @@ namespace MeshLoader
 		}
 
 		//LOAD DATA USING METHODS ABOVE
+		LoadTextures(inFile, *mesh);
 		LoadVertices(inFile, *mesh);
 		LoadColours(inFile, *mesh);
 		LoadIndices(inFile, *mesh);
