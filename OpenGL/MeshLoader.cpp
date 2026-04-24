@@ -68,7 +68,7 @@ namespace MeshLoader
 		}
 	}
 
-	Mesh* MeshLoader::Load(char* path)
+	Mesh* MeshLoader::LoadTextured(char* path)
 	{
 		Mesh* mesh = new Mesh();
 
@@ -83,7 +83,30 @@ namespace MeshLoader
 		}
 
 		//LOAD DATA USING METHODS ABOVE
+
+		LoadVertices(inFile, *mesh);
+		LoadColours(inFile, *mesh);
 		LoadTextures(inFile, *mesh);
+		LoadIndices(inFile, *mesh);
+		return mesh;
+	}
+
+	Mesh* MeshLoader::Load(char* path)
+	{
+		Mesh* mesh = new Mesh();
+
+		ifstream inFile;
+
+		inFile.open(path);
+
+		if (!inFile.good())
+		{
+			cerr << "Can't open texture file " << path << endl;
+			return nullptr;
+		}
+
+		//LOAD DATA USING METHODS ABOVE
+
 		LoadVertices(inFile, *mesh);
 		LoadColours(inFile, *mesh);
 		LoadIndices(inFile, *mesh);

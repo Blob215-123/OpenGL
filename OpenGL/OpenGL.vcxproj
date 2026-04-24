@@ -150,6 +150,9 @@
     <Text Include="cube.txt" />
     <Text Include="pyramid.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Penguins.raw" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

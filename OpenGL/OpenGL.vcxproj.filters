@@ -70,4 +70,7 @@
     <Text Include="cube.txt" />
     <Text Include="pyramid.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Penguins.raw" />
+  </ItemGroup>
 </Project>

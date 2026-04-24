@@ -1,18 +1,13 @@
-﻿  Cube.cpp
-  GLUTCallbacks.cpp
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\helloGL.h(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'GLUTCallbacks.cpp')
-  
-  HelloGL.cpp
+﻿  HelloGL.cpp
 C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.h(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'HelloGL.cpp')
   
-  MeshLoader.cpp
-  Pyramid.cpp
-  SceneObject.cpp
   main.cpp
 C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\helloGL.h(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'main.cpp')
   
+  MeshLoader.cpp
+  Pyramid.cpp
+  Texture2D.cpp
   Generating Code...
   OpenGL.vcxproj -> C:\Users\r010918o\Documents\GitHub\OpenGL\Debug\OpenGL.exe
