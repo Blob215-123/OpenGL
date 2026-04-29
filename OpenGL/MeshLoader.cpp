@@ -9,7 +9,7 @@ namespace MeshLoader
 {
 	void LoadTextures(ifstream& inFile, Mesh& mesh);
 	void LoadVertices(ifstream& inFile, Mesh& mesh);
-	void LoadColours(ifstream& inFile, Mesh& mesh);
+	void LoadNormals(ifstream& inFile, Mesh& mesh);
 	void LoadIndices(ifstream& inFile, Mesh& mesh);
 
 	void LoadTextures(ifstream& inFile, Mesh& mesh)
@@ -44,16 +44,16 @@ namespace MeshLoader
 		}
 	}
 
-	void LoadColours(ifstream& inFile, Mesh& mesh)
+	void LoadNormals(ifstream& inFile, Mesh& mesh)
 	{
-		inFile >> mesh.ColorCount;
-		mesh.Colors = new Color[mesh.ColorCount];
+		inFile >> mesh.NormalCount;
+		mesh.Normals = new Vector3[mesh.NormalCount];
 
-		for (int i = 0; i < mesh.ColorCount; i++)
+		for (int i = 0; i < mesh.NormalCount; i++)
 		{
-			inFile >> mesh.Colors[i].r;
-			inFile >> mesh.Colors[i].g;
-			inFile >> mesh.Colors[i].b;
+			inFile >> mesh.Normals[i].x;
+			inFile >> mesh.Normals[i].y;
+			inFile >> mesh.Normals[i].z;
 		}
 	}
 
@@ -85,8 +85,8 @@ namespace MeshLoader
 		//LOAD DATA USING METHODS ABOVE
 
 		LoadVertices(inFile, *mesh);
-		LoadColours(inFile, *mesh);
 		LoadTextures(inFile, *mesh);
+		LoadNormals(inFile, *mesh);
 		LoadIndices(inFile, *mesh);
 		return mesh;
 	}
@@ -108,7 +108,7 @@ namespace MeshLoader
 		//LOAD DATA USING METHODS ABOVE
 
 		LoadVertices(inFile, *mesh);
-		LoadColours(inFile, *mesh);
+		LoadNormals(inFile, *mesh);
 		LoadIndices(inFile, *mesh);
 		return mesh;
 	}

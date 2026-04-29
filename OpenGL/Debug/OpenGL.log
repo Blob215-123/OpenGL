@@ -1,13 +1,22 @@
-﻿  HelloGL.cpp
+﻿  Cube.cpp
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\Cube.cpp(19,25): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\Cube.cpp(19,53): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\Cube.cpp(19,82): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\Cube.cpp(21,25): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\Cube.cpp(21,53): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\Cube.cpp(21,82): warning C4305: '=': truncation from 'double' to 'float'
+  HelloGL.cpp
 C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.h(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'HelloGL.cpp')
   
-  main.cpp
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\helloGL.h(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'main.cpp')
-  
-  MeshLoader.cpp
-  Pyramid.cpp
-  Texture2D.cpp
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(130,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(131,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(132,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(134,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(135,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(136,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(138,27): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(139,27): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(140,27): warning C4305: '=': truncation from 'double' to 'float'
   Generating Code...
   OpenGL.vcxproj -> C:\Users\r010918o\Documents\GitHub\OpenGL\Debug\OpenGL.exe

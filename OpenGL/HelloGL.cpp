@@ -7,6 +7,7 @@ HelloGL::HelloGL(int argc, char* argv[])
 {
 	InitGL(argc, argv);
 	InitObjects();
+	InitLighting();
 	glutMainLoop();
 }
 HelloGL::~HelloGL()
@@ -41,6 +42,8 @@ void HelloGL::Update()
 	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, 
 		camera->center.x, camera->center.y, camera->center.z,
 		camera->up.x, camera->up.y, camera->up.z);
+	glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.x));
+	glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->x));
 
 	for (int i = 0; i < 1000; i++)
 	{
@@ -115,180 +118,44 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 		camera->center.z -= 0.1f;
 	}
 }
-//void HelloGL::DrawCube()
-//{
-//	glBegin(GL_TRIANGLES);
-//
-//	// face v0-v1-v2
-//
-//	glColor3f(1, 1, 1);
-//	glVertex3f(1, 1, 1);
-//	glColor3f(1, 1, 0);
-//	glVertex3f(-1, 1, 1);
-//	glColor3f(1, 0, 0);
-//	glVertex3f(-1, -1, 1);
-//
-//	// face v2-v3-v0
-//
-//	glColor3f(1, 0, 0);
-//	glVertex3f(-1, -1, 1);
-//	glColor3f(1, 0, 1);
-//	glVertex3f(1, -1, 1);
-//	glColor3f(1, 1, 1);
-//	glVertex3f(1, 1, 1);
-//
-//	// face v0-v3-v4
-//
-//	glColor3f(1, 1, 1);
-//	glVertex3f(1, 1, 1);
-//	glColor3f(1, 0, 1);
-//	glVertex3f(1, -1, 1);
-//	glColor3f(0, 0, 1);
-//	glVertex3f(1, -1, -1);
-//
-//	// face v4-v5-v0
-//
-//	glColor3f(0, 0, 1);
-//	glVertex3f(1, -1, -1);
-//	glColor3f(0, 1, 1);
-//	glVertex3f(1, 1, -1);
-//	glColor3f(1, 1, 1);
-//	glVertex3f(1, 1, 1);
-//
-//	// face v0-v5-v6
-//
-//	glColor3f(1, 1, 1);
-//	glVertex3f(1, 1, 1);
-//	glColor3f(0, 1, 1);
-//	glVertex3f(1, 1, -1);
-//	glColor3f(0, 1, 0);
-//	glVertex3f(-1, 1, -1);
-//
-//	// face v6-v1-v0
-//
-//	glColor3f(0, 1, 0);
-//	glVertex3f(-1, 1, -1);
-//	glColor3f(1, 1, 0);
-//	glVertex3f(-1, 1, 1);
-//	glColor3f(1, 1, 1);
-//	glVertex3f(1, 1, 1);
-//
-//
-//	// face v1-v6-v7
-//
-//	glColor3f(1, 1, 0);
-//	glVertex3f(-1, 1, 1);
-//	glColor3f(0, 1, 0);
-//	glVertex3f(-1, 1, -1);
-//	glColor3f(0, 0, 0);
-//	glVertex3f(-1, -1, -1);
-//
-//	// face v7-v2-v1
-//
-//	glColor3f(0, 0, 0);
-//	glVertex3f(-1, -1, -1);
-//	glColor3f(1, 0, 0);
-//	glVertex3f(-1, -1, 1);
-//	glColor3f(1, 1, 0);
-//	glVertex3f(-1, 1, 1);
-//
-//	// face v7-v4-v3
-//
-//	glColor3f(0, 0, 0);
-//	glVertex3f(-1, -1, -1);
-//	glColor3f(0, 0, 1);
-//	glVertex3f(1, -1, -1);
-//	glColor3f(1, 0, 1);
-//	glVertex3f(1, -1, 1);
-//
-//	// face v3-v2-v7
-//
-//	glColor3f(1, 0, 1);
-//	glVertex3f(1, -1, 1);
-//	glColor3f(1, 0, 0);
-//	glVertex3f(-1, -1, 1);
-//	glColor3f(0, 0, 0);
-//	glVertex3f(-1, -1, -1);
-//
-//	// face v4-v7-v6
-//
-//	glColor3f(0, 0, 1);
-//	glVertex3f(1, -1, -1);
-//	glColor3f(0, 0, 0);
-//	glVertex3f(-1, -1, -1);
-//	glColor3f(0, 1, 0);
-//	glVertex3f(-1, 1, -1);
-//
-//	// face v6-v5-v4
-//
-//	glColor3f(0, 1, 0);
-//	glVertex3f(-1, 1, -1);
-//	glColor3f(0, 1, 1);
-//	glVertex3f(1, 1, -1);
-//	glColor3f(0, 0, 1);
-//	glVertex3f(1, -1, -1);
-//
-//	glEnd();
-//}
-//void HelloGL::DrawCubeArray()
-//{
-//	glPushMatrix();
-//
-//	glBegin(GL_TRIANGLES);
-//	for (int i = 0; i < 36; i++)
-//	{
-//		glColor3fv(&colors[i].r);
-//		glVertex3fv(&vertices[i].x);
-//	}
-//	glEnd();
-//
-//	glPopMatrix();
-//}
-//void HelloGL::DrawIndexedCube()
-//{
-//	//glPushMatrix();
-//
-//	//glBegin(GL_TRIANGLES);
-//	//for (int i = 0; i < 36; i++)
-//	//{
-//	//	glColor3fv(&indexedColours[indices[i]].r);
-//	//	glVertex3fv(&indexedVertices[indices[i]].x);
-//	//}
-//	//glEnd();
-//	//glPopMatrix();
-//}
-//void HelloGL::DrawIndexedCubeAlt()
-//{
-//	//glEnableClientState(GL_VERTEX_ARRAY);
-//	//glEnableClientState(GL_COLOR_ARRAY);
-//
-//	//glVertexPointer(3, GL_FLOAT, 0, indexedVertices);
-//	//glColorPointer(3, GL_FLOAT, 0, indexedColours);
-//
-//	//glPushMatrix();
-//	//	glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, indices);
-//
-//	//glPopMatrix();
-//
-//	//glDisableClientState(GL_COLOR_ARRAY);
-//	//glDisableClientState(GL_VERTEX_ARRAY);
-//}
+void HelloGL::InitLighting()
+{
+	_lightPosition = new Vector4();
+	_lightPosition->x = 0.0;
+	_lightPosition->y = 0.0;
+	_lightPosition->z = 1.0;
+	_lightPosition->w = 0.0;
+
+	_lightData = new Lighting();
+	_lightData->Ambient.x = 0.2;
+	_lightData->Ambient.y = 0.2;
+	_lightData->Ambient.z = 0.2;
+	_lightData->Ambient.w = 1.0;
+	_lightData->Diffuse.x = 0.8;
+	_lightData->Diffuse.y = 0.8;
+	_lightData->Diffuse.z = 0.8;
+	_lightData->Diffuse.w = 1.0;
+	_lightData->Specular.x = 0.2;
+	_lightData->Specular.y = 0.2;
+	_lightData->Specular.z = 0.2;
+	_lightData->Specular.w = 1.0;
+}
 void HelloGL::InitObjects()
 {
 		rotation = 0.0f;
 		Mesh* cubeMesh = MeshLoader::LoadTextured((char*)"cube.txt");
-		Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
+		//Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
 		Texture2D* texture = new Texture2D();
 		texture->Load((char*)"Penguins.raw", 512, 512);
 
-	for (int i = 0; i < 500; i++)
+	for (int i = 0; i < 1000; i++)
 	{
 		objects[i] = new Cube(cubeMesh, texture ,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 	}
-	for (int i = 500; i < 1000; i++)
-	{
-		objects[i] = new Pyramid(pyramidMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
-	}
+	//for (int i = 500; i < 1000; i++)
+	//{
+	//	objects[i] = new Pyramid(pyramidMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+	//}
 
 	camera = new Camera();
 	camera->eye.x = 0; camera->eye.y = 0; camera->eye.z = 1;
@@ -330,8 +197,7 @@ void HelloGL::InitGL(int argc, char* argv[])
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 	glEnable(GL_DEPTH_TEST);
-
-
-
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);
 
 }

@@ -18,29 +18,20 @@ public:
 
 	void Display();
 
-	//void DrawPolygon();
-	//void DrawPolygon(float x, float y);
-	//void DrawTriangle(float x, float y);
 	void Update();
-	//void DrawCube();
-	//void DrawCubeArray();
-	//void DrawIndexedCube();
-	//void DrawIndexedCubeAlt();
 	void Keyboard(unsigned char key, int x, int y);
 	void InitObjects();
 	void InitGL(int argc, char* argv[]);
+	void InitLighting();
 
 private:
 	SceneObject* objects[1000];
 
 	Camera* camera;
 
-	//static Vertex vertices[];
-	//static Color colors[];
-
-	//static Vertex indexedVertices[];
-	//static Color indexedColours[];
-	//static GLushort indices[];
-
 	float rotation;
+
+	Vector4* _lightPosition;
+	Lighting* _lightData;
+
 };

@@ -9,12 +9,15 @@ private:
 
 	Vector3 _position;
 	GLfloat _rotation;
+	Material* _material;
+
 public:
 	Cube(Mesh* mesh, Texture2D* texture,float x, float y, float z);
 
 
 	~Cube();
 	static bool Load(char* path);
+	void LoadMaterial();
 
 	void Draw();
 	void Update();
