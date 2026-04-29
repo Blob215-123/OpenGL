@@ -2,6 +2,7 @@
 #include "Cube.h"
 #include "MeshLoader.h"
 #include "Pyramid.h"
+#include <cmath>
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
@@ -21,12 +22,6 @@ void HelloGL::Display()
 	//Must be first
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	/*DrawPolygon(-0.5, 0.5);
-	//DrawPolygon(0.5, -0.5);*/
-	/*DrawTriangle(-0.5, 0.5);
-	DrawTriangle(0.5, -0.5);*/
-	/*DrawCube();*/
-	/*DrawCubeArray();*/
 	for (int i = 0; i < 1000; i++)
 	{
 		objects[i]->Draw();
@@ -34,6 +29,18 @@ void HelloGL::Display()
 	//Must be last
 	glFlush();
 	glutSwapBuffers();
+}
+void HelloGL::DrawString(const char* text, Vector3* position, Color* color)
+{
+	glPushMatrix();
+
+	glTranslatef(position->x, position->y, position->z);
+	glRasterPos2f(0.0f, 0.0f);
+	glutBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, (unsigned char*)text);
+
+	glPopMatrix();
+
+
 }
 void HelloGL::Update()
 {
@@ -54,37 +61,6 @@ void HelloGL::Update()
 	glutPostRedisplay();
 }
 
-//void HelloGL::DrawPolygon()
-//{
-//	//Draw polygon
-//	glBegin(GL_POLYGON);
-//	glVertex2f(-0.75, 0.5);
-//	glVertex2f(0.75, 0.5);
-//	glVertex2f(0.75, -0.5);
-//	glVertex2f(-0.75, -0.5);
-//	glEnd();
-//
-//}
-//void HelloGL::DrawPolygon(float x, float y)
-//{
-//	glBegin(GL_POLYGON);
-//	glVertex2f(x + -0.15, y + 0.15);
-//	glVertex2f(x + 0.15, y + 0.15);
-//	glVertex2f(x + 0.15, y + -0.15);
-//	glVertex2f(x + -0.15, y + -0.15);
-//	glEnd();
-//}  
-//void HelloGL::DrawTriangle(float x, float y)
-//{
-//	glPushMatrix();
-//	glTranslatef(x, y, 0);
-//
-//
-//	glRotatef(rotation, 0, 0, 0.5);
-//	glColor3f(0, 1, 0);
-//	glutWireTeapot(1);
-//	glPopMatrix();
-//}
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
 	if (key == 'w')
@@ -110,12 +86,18 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 	else if (key == 'z')
 	{
 		camera->center.x -= 0.1f;
-		camera->center.z += 0.1f;
 	}
 	else if (key == 'c')
 	{
 		camera->center.x += 0.1f;
-		camera->center.z -= 0.1f;
+		//Assuming the distance of center and eye is 1
+		camera->center.z = (sqrt(1 - (camera->center.x * camera->center.x)));
+	}
+	else if (key == 'r')
+	{
+		camera->center.x = 0;
+		camera->center.z = 0;
+		camera->eye.z = 1;
 	}
 }
 void HelloGL::InitLighting()
@@ -142,6 +124,8 @@ void HelloGL::InitLighting()
 }
 void HelloGL::InitObjects()
 {
+		Vector3 v = { -1.4f, 0.7f, -1.0f };
+		Color c = { 0.0f, 1.0f, 0.0f };
 		rotation = 0.0f;
 		Mesh* cubeMesh = MeshLoader::LoadTextured((char*)"cube.txt");
 		//Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
@@ -161,6 +145,7 @@ void HelloGL::InitObjects()
 	camera->eye.x = 0; camera->eye.y = 0; camera->eye.z = 1;
 	camera->center.x = 0; camera->center.y = 0; camera->center.x = 0;
 	camera->up.x = 0; camera->up.y = 1; camera->up.z = 0;
+	DrawString("OPENGL PRJECT", &v, &c);
 }
 void HelloGL::InitGL(int argc, char* argv[])
 {
