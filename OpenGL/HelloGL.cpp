@@ -63,6 +63,12 @@ void HelloGL::Update()
 
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
+	float magnitude;
+	float rotation = 0.0f;
+	float origin[2] = { 0, 0 };
+	float vectorFromAngle[2] = { 0, 0 };
+
+
 	if (key == 'w')
 	{
 		camera->eye.z -= 0.1f;
@@ -85,13 +91,12 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 	}
 	else if (key == 'z')
 	{
-		camera->center.x -= 0.1f;
+		rotation -= 1;
 	}
 	else if (key == 'c')
 	{
-		camera->center.x += 0.1f;
-		//Assuming the distance of center and eye is 1
-		camera->center.z = (sqrt(1 - (camera->center.x * camera->center.x)));
+		rotation += 1;
+
 	}
 	else if (key == 'r')
 	{

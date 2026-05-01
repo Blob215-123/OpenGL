@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Structure.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\Structure.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -25,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Structure.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\Structure.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02882F16-571F-4C3E-A7D6-B7DCD2FEEDC3}|OpenGL\\OpenGL.vcxproj|C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\MeshLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -66,11 +70,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\main.cpp",
+              "RelativeDocumentMoniker": "OpenGL\\main.cpp",
+              "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\main.cpp",
+              "RelativeToolTip": "OpenGL\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-01T14:12:02.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "HelloGL.h",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.h",
               "RelativeDocumentMoniker": "OpenGL\\HelloGL.h",
@@ -78,11 +95,12 @@
               "RelativeToolTip": "OpenGL\\HelloGL.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-29T10:33:33.146Z"
+              "WhenOpened": "2026-04-29T10:33:33.146Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Structure.h",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Structure.h",
               "RelativeDocumentMoniker": "OpenGL\\Structure.h",
@@ -90,7 +108,8 @@
               "RelativeToolTip": "OpenGL\\Structure.h",
               "ViewState": "AgIAABsAAAAAAAAAAAAqwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T13:58:35.997Z"
+              "WhenOpened": "2026-04-17T13:58:35.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -100,14 +119,14 @@
               "RelativeDocumentMoniker": "OpenGL\\HelloGL.cpp",
               "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\HelloGL.cpp",
               "RelativeToolTip": "OpenGL\\HelloGL.cpp",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFsAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAADwv2IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-06T14:59:10.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "SceneObject.h",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\SceneObject.h",
               "RelativeDocumentMoniker": "OpenGL\\SceneObject.h",
@@ -119,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Cube.cpp",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Cube.cpp",
               "RelativeDocumentMoniker": "OpenGL\\Cube.cpp",
@@ -131,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Pyramid.cpp",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Pyramid.cpp",
               "RelativeDocumentMoniker": "OpenGL\\Pyramid.cpp",
@@ -143,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "cube.txt",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\cube.txt",
               "RelativeDocumentMoniker": "OpenGL\\cube.txt",
@@ -155,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Texture2D.cpp",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Texture2D.cpp",
               "RelativeDocumentMoniker": "OpenGL\\Texture2D.cpp",
@@ -173,7 +192,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MeshLoader.h",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\MeshLoader.h",
               "RelativeDocumentMoniker": "OpenGL\\MeshLoader.h",
@@ -185,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "pyramid.txt",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\pyramid.txt",
               "RelativeDocumentMoniker": "OpenGL\\pyramid.txt",
@@ -197,20 +216,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Cube.h",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Cube.h",
               "RelativeDocumentMoniker": "OpenGL\\Cube.h",
               "ToolTip": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Cube.h",
               "RelativeToolTip": "OpenGL\\Cube.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-17T13:58:18.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Texture2D.h",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\Texture2D.h",
               "RelativeDocumentMoniker": "OpenGL\\Texture2D.h",
@@ -222,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "MeshLoader.cpp",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\MeshLoader.cpp",
               "RelativeDocumentMoniker": "OpenGL\\MeshLoader.cpp",
@@ -234,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "SceneObject.cpp",
               "DocumentMoniker": "C:\\Users\\r010918o\\Documents\\GitHub\\OpenGL\\OpenGL\\SceneObject.cpp",
               "RelativeDocumentMoniker": "OpenGL\\SceneObject.cpp",

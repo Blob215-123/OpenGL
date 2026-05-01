@@ -2,13 +2,14 @@
 C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.h(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'HelloGL.cpp')
   
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(112,26): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(113,26): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(114,26): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(116,26): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(117,26): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(118,26): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(120,27): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(121,27): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(122,27): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(107,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(130,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(131,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(132,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(134,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(135,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(136,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(138,27): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(139,27): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\r010918o\Documents\GitHub\OpenGL\OpenGL\HelloGL.cpp(140,27): warning C4305: '=': truncation from 'double' to 'float'
   OpenGL.vcxproj -> C:\Users\r010918o\Documents\GitHub\OpenGL\Debug\OpenGL.exe
