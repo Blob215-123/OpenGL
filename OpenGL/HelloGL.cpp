@@ -27,11 +27,15 @@ void HelloGL::Display()
 		objects[i]->Draw();
 	}
 	//Must be last
+	Vector3 v = { 0.0f, 0.0f, 0.0f };
+	Color c = { 0.0f, 1.0f , 0.0f };
+	DrawString("OPENGL PRJECT", &v, &c);
 	glFlush();
 	glutSwapBuffers();
 }
 void HelloGL::DrawString(const char* text, Vector3* position, Color* color)
 {
+
 	glPushMatrix();
 
 	glTranslatef(position->x, position->y, position->z);
@@ -45,7 +49,6 @@ void HelloGL::DrawString(const char* text, Vector3* position, Color* color)
 void HelloGL::Update()
 {
 	glLoadIdentity(); 
-	//rotation += 0.5f;
 	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, 
 		camera->center.x, camera->center.y, camera->center.z,
 		camera->up.x, camera->up.y, camera->up.z);
@@ -56,19 +59,12 @@ void HelloGL::Update()
 	{
 		objects[i]->Update();
 	}
-	if (rotation >= 360.0f)
-		rotation = 0.0f;
 	glutPostRedisplay();
 }
 
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
-	float magnitude;
-	float rotation = 0.0f;
-	float origin[2] = { 0, 0 };
-	float vectorFromAngle[2] = { 0, 0 };
-
-
+	float angle = 0.0f;
 	if (key == 'w')
 	{
 		camera->eye.z -= 0.1f;
@@ -91,12 +87,18 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 	}
 	else if (key == 'z')
 	{
-		rotation -= 1;
+		std::cerr << camera->center.x << std::endl;
+		angle = angle - 1;
+		std::cerr << "Camera rotation: " << rotation << std::endl;
+		camera->center.x = camera->eye.x + (1 * cos(rotation));
+		camera->center.z = camera->eye.z + (1 * sin(rotation));
+		std::cerr << camera->center.x << std::endl;
 	}
 	else if (key == 'c')
 	{
-		rotation += 1;
-
+		angle += 1.0f;
+		camera->center.x = camera->eye.x + (1 * cos(rotation));
+		camera->center.z = camera->eye.z + (1 * sin(rotation));
 	}
 	else if (key == 'r')
 	{
@@ -129,8 +131,6 @@ void HelloGL::InitLighting()
 }
 void HelloGL::InitObjects()
 {
-		Vector3 v = { -1.4f, 0.7f, -1.0f };
-		Color c = { 0.0f, 1.0f, 0.0f };
 		rotation = 0.0f;
 		Mesh* cubeMesh = MeshLoader::LoadTextured((char*)"cube.txt");
 		//Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
@@ -150,7 +150,7 @@ void HelloGL::InitObjects()
 	camera->eye.x = 0; camera->eye.y = 0; camera->eye.z = 1;
 	camera->center.x = 0; camera->center.y = 0; camera->center.x = 0;
 	camera->up.x = 0; camera->up.y = 1; camera->up.z = 0;
-	DrawString("OPENGL PRJECT", &v, &c);
+
 }
 void HelloGL::InitGL(int argc, char* argv[])
 {
