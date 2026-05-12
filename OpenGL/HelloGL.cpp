@@ -27,7 +27,7 @@ void HelloGL::Display()
 		objects[i]->Draw();
 	}
 	//Must be last
-	Vector3 v = { 0.0f, 0.0f, 0.0f };
+	Vector3 v = { -1.4f, 0.7f, -1.0f };
 	Color c = { 0.0f, 1.0f , 0.0f };
 	DrawString("OPENGL PRJECT", &v, &c);
 	glFlush();
@@ -64,7 +64,6 @@ void HelloGL::Update()
 
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
-	float angle = 0.0f;
 	if (key == 'w')
 	{
 		camera->eye.z -= 0.1f;
@@ -85,53 +84,68 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 		camera->eye.x += 0.1f;
 		camera->center.x += 0.1f;
 	}
+	else if (key == 'q')
+	{
+		camera->eye.y -= 0.1f;
+		camera->center.y -= 0.1f;
+	}
+	else if (key == 'e')
+	{
+		camera->eye.y += 0.1f;
+		camera->center.y += 0.1f;
+	}
 	else if (key == 'z')
 	{
 		std::cerr << camera->center.x << std::endl;
-		angle = angle - 1;
-		std::cerr << "Camera rotation: " << rotation << std::endl;
-		camera->center.x = camera->eye.x + (1 * cos(rotation));
-		camera->center.z = camera->eye.z + (1 * sin(rotation));
+		angle -= 0.1f;
+		std::cerr << "Camera rotation: " << angle << std::endl;
+		camera->center.x = camera->eye.x + (1 * cos(angle));
+		camera->center.z = camera->eye.z + (1 * sin(angle));
 		std::cerr << camera->center.x << std::endl;
 	}
 	else if (key == 'c')
 	{
-		angle += 1.0f;
-		camera->center.x = camera->eye.x + (1 * cos(rotation));
-		camera->center.z = camera->eye.z + (1 * sin(rotation));
+		std::cerr << camera->center.x << std::endl;
+		angle += 0.1f;
+		std::cerr << "Camera rotation: " << angle << std::endl;
+		camera->center.x = camera->eye.x + (1 * cos(angle));
+		camera->center.z = camera->eye.z + (1 * sin(angle));
+		std::cerr << camera->center.x << std::endl;
 	}
 	else if (key == 'r')
 	{
-		camera->center.x = 0;
-		camera->center.z = 0;
-		camera->eye.z = 1;
+		angle = 0.0f;
+		camera->eye.x = 0; camera->eye.y = 0; camera->eye.z = 1;
+		camera->center.x = 0; camera->center.y = 0; camera->center.x = 0;
+		camera->up.x = 0; camera->up.y = 1; camera->up.z = 0;
 	}
 }
 void HelloGL::InitLighting()
 {
 	_lightPosition = new Vector4();
-	_lightPosition->x = 0.0;
-	_lightPosition->y = 0.0;
-	_lightPosition->z = 1.0;
-	_lightPosition->w = 0.0;
+	_lightPosition->x = 0.0f;
+	_lightPosition->y = 0.0f;
+	_lightPosition->z = 1.0f;
+	_lightPosition->w = 0.0f;
 
 	_lightData = new Lighting();
-	_lightData->Ambient.x = 0.2;
-	_lightData->Ambient.y = 0.2;
-	_lightData->Ambient.z = 0.2;
-	_lightData->Ambient.w = 1.0;
-	_lightData->Diffuse.x = 0.8;
-	_lightData->Diffuse.y = 0.8;
-	_lightData->Diffuse.z = 0.8;
-	_lightData->Diffuse.w = 1.0;
-	_lightData->Specular.x = 0.2;
-	_lightData->Specular.y = 0.2;
-	_lightData->Specular.z = 0.2;
-	_lightData->Specular.w = 1.0;
+	_lightData->Ambient.x = 0.2f;
+	_lightData->Ambient.y = 0.2f;
+	_lightData->Ambient.z = 0.2f;
+	_lightData->Ambient.w = 1.0f;
+	_lightData->Diffuse.x = 0.8f;
+	_lightData->Diffuse.y = 0.8f;
+	_lightData->Diffuse.z = 0.8f;
+	_lightData->Diffuse.w = 1.0f;
+	_lightData->Specular.x = 0.2f;
+	_lightData->Specular.y = 0.2f;
+	_lightData->Specular.z = 0.2f;
+	_lightData->Specular.w = 1.0f;
 }
 void HelloGL::InitObjects()
 {
 		rotation = 0.0f;
+		angle = 0.0f;
 		Mesh* cubeMesh = MeshLoader::LoadTextured((char*)"cube.txt");
 		//Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
 		Texture2D* texture = new Texture2D();

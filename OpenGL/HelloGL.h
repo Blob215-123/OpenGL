@@ -6,7 +6,7 @@
 #include <Windows.h>
 #include "GLUTCallbacks.h"
 #include "Structure.h"
-#include "Cube.h";
+#include "Cube.h"
 
 #define REFRESHRATE 16
 
@@ -32,6 +32,7 @@ private:
 	Camera* camera;
 
 	float rotation;
+	float angle;
 
 	Vector4* _lightPosition;
 	Lighting* _lightData;
